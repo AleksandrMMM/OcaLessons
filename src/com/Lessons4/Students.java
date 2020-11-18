@@ -5,27 +5,37 @@ import jdk.dynalink.NoSuchDynamicMethodException;
 public class Students {
 
 
-    int number;
-    String name;
-    String fio;
-    int year;
-    int mafh1;
-    int econom;
-    int english;
+   private int number;
+    private String name;
+    private String fio;
+    private int year;
+    private int mafh1;
+    private int econom;
+    private int english;
 
-   public Students(int getNumber, String getName, String getFio ){
+   public Students(int number, String name, String fio,  int year, int mafh1, int english,int econom   ){
+       this.number = number;
+       this.name = name;
+       this.fio = fio;
+       this.year = year;
+       this.mafh1 = mafh1;
+       this.english = english;
+       this.econom = econom;
 
    }
 
+
     public int getNumber(){
-       if (getNumber() == 0){
-           System.out.println("Error");
-           getNumber();
-       }
+
         return number;
     }
-    public void setNumber(){
-        this.number = number;
+    public void setNumber(int number){
+       if(number == 0){
+           System.out.println("error");
+
+       }else {
+           this.number = number;
+       }
     }
 
     public String getName() {
@@ -60,7 +70,7 @@ public class Students {
         this.mafh1 = mafh1;
     }
 
-    public int getEconom() {
+    public int getEconomy() {
         return econom;
     }
 
