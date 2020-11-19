@@ -1,7 +1,5 @@
 package com.Lessons4;
 
-import jdk.dynalink.NoSuchDynamicMethodException;
-
 public class Students {
 
 
@@ -22,6 +20,11 @@ public class Students {
        this.english = english;
        this.econom = econom;
 
+   }// я хочу использовать в методе переменные которые я объявил в конструкторе, как мне это реализовать правильно.
+   public double sred(int mafh1, int english, int econom){
+       int sr = (mafh1 + econom +english)/3;
+       System.out.println(sr);
+       return sr;
    }
 
 
